@@ -4,7 +4,7 @@ namespace apbd_5_s22085.DAL;
 
 public interface IProductWarehouseRepository
 {
-    Task FindProductWarehouseByOrderIdAsync(int orderId);
+    Task<bool> FindProductWarehouseByOrderIdAsync(int orderId);
 
-    Task InsertProductWarehouseAsync(NewProductWarehouseDto newProductWarehouseDto);
+    Task<int?> InsertProductWarehouseAndUpdateOrderAsync(NewProductWarehouseDto newProductWarehouseDto);
 }

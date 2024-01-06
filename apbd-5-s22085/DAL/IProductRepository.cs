@@ -1,6 +1,8 @@
-﻿namespace apbd_5_s22085.DAL;
+﻿using apbd_5_s22085.DTOs;
+
+namespace apbd_5_s22085.DAL;
 
 public interface IProductRepository
 {
-    Task<int> GetProductPriceByIdAsync(int productId);
+    Task<ProductPriceDto> GetPriceIfExists(int productId);
 }

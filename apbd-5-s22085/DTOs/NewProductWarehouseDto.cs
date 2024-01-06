@@ -4,7 +4,7 @@ public record NewProductWarehouseDto(
     int warehouseId,
     int productId,
     int orderId,
-    int amount,
-    int price,
+    int amount, 
+    decimal price,
     DateTime createdAt
 );
