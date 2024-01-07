@@ -15,7 +15,7 @@ public class WarehouseRepository : IWarehouseRepository
     
     public async Task<bool> CheckIfWarehouseExistsAsync(int warehouseId)
     {
-        await using var connection = new SqlConnection("Data Source=db-mssql;Initial Catalog=s22085;Integrated Security=True");
+        await using var connection = new SqlConnection(_connectionString);
         await using var command = new SqlCommand("SELECT * FROM Warehouse WHERE IdWarehouse = @warehouseId", connection);
         command.Parameters.AddWithValue("warehouseId", warehouseId);
         await connection.OpenAsync();

@@ -13,6 +13,7 @@ builder.Services.AddScoped<IOrderRepository, OrderRepository>();
 builder.Services.AddScoped<IProductRepository, ProductRepository>();
 builder.Services.AddScoped<IWarehouseRepository, WarehouseRepository>();
 builder.Services.AddScoped<IProductWarehouseRepository, ProductWarehouseRepository>();
+builder.Services.AddScoped<IProceduralWarehouseRepository, ProceduralWarehouseRepository>();
 
 var app = builder.Build();
 
